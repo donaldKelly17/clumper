@@ -1,4 +1,6 @@
 class Clumper:
+    """"""
+
     def __init__(self, blob):
         self.blob = blob
 
