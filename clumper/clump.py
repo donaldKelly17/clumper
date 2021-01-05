@@ -1,5 +1,7 @@
 class Clumper:
-    """"""
+    """
+    Clumper will make it easier to analyse lists of nested dictionaries.
+    """
 
     def __init__(self, blob):
         self.blob = blob
