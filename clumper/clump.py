@@ -26,3 +26,6 @@ class Clumper:
 
     def sort(self, key, reverse=False):
         return Clumper(sorted(self.blob, key=key, reverse=reverse))
+
+    def collect(self):
+        return self.blob
