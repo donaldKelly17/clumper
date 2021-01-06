@@ -6,6 +6,9 @@ class Clumper:
     def __init__(self, blob):
         self.blob = blob
 
+    def __len__(self):
+        return len(self.blob)
+
     def keep(self, *funcs):
         data = self.blob
         for func in funcs:
