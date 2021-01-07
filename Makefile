@@ -7,8 +7,7 @@ flake:
 test:
 	pytest
 
-check:
-	black flake test
+check: black flake test
 
 install:
 	python -m pip install -e .
