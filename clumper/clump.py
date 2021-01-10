@@ -15,10 +15,20 @@ class Clumper:
             data = [d for d in data if func(d)]
         return Clumper(data)
 
-    def head(self, n):
+    def head(self, n=5):
+        if not isinstance(n, int):
+            raise ValueError(f"`n` must be a positive integer, got {n}")
+        if n < 0:
+            raise ValueError(f"`n` must be a positive integer, got {n}")
+        n = min(n, len(self))
         return Clumper([self.blob[i] for i in range(n)])
 
     def tail(self, n):
+        if not isinstance(n, int):
+            raise ValueError(f"`n` must be a positive integer, got {n}")
+        if n < 0:
+            raise ValueError(f"`n` must be positive, got {n}")
+        n = min(n, len(self))
         return Clumper([self.blob[-i] for i in range(1, n + 1)])
 
     def select(self, *keys):

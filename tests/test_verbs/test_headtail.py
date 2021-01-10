@@ -1,11 +1,11 @@
 from clumper import Clumper
+import pytest
 
 
-def test_headtail_size(base_clumper):
-    assert len(base_clumper.head(10)) == 10
-    assert len(base_clumper.tail(10)) == 10
-    assert len(base_clumper.head(5)) == 5
-    assert len(base_clumper.tail(5)) == 5
+@pytest.mark.parametrize("n,expected", [(0, 0), (5, 5), (10, 10), (26, 26), (1000, 26)])
+def test_headtail_size(base_clumper, n, expected):
+    assert len(base_clumper.head(n)) == expected
+    assert len(base_clumper.tail(n)) == expected
 
 
 def test_can_collect_tail():
