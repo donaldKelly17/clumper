@@ -1,4 +1,8 @@
 site_name: Clumper
+plugins:
+    - mkdocstrings:
+        watch:
+          - clumper
 theme:
     name: material
     palette:
