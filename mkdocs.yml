@@ -1,8 +1,11 @@
-site_name: Clumper
+site_name: Clumper Docs
+repo_url: https://github.com/donaldKelly17/clumper
+site_url: https://donaldkelly17.github.io/clumper/
 plugins:
     - mkdocstrings:
         watch:
           - clumper
+    - search
 theme:
     name: material
     palette:
