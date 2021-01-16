@@ -1,0 +1,19 @@
+site_name: Clumper
+plugins:
+    - mkdocstrings:
+        watch:
+          - clumper
+theme:
+    name: material
+    palette:
+        primary: purple
+        accent: cyan
+    font:
+        text: Ubuntu
+        code: Ubuntu Mono
+    icon:
+        logo: material/cloud
+markdown_extensions:
+    - pymdownx.highlight:
+        linenums: true
+    - pymdownx.superfences
